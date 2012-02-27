@@ -1,4 +1,4 @@
-require 'hw1'
+require 'hw1_part1'
 require 'test/unit'
 
 class TestFunWithStrings < Test::Unit::TestCase

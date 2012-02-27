@@ -1,4 +1,4 @@
-require 'hw1'
+require 'hw1_part2'
 require 'test/unit'
 
 class TestRockPaperScissors < Test::Unit::TestCase

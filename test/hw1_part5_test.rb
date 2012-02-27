@@ -1,4 +1,4 @@
-require 'hw1'
+require 'hw1_part5'
 require 'test/unit'
 
 class Foo

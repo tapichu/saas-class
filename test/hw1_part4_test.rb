@@ -1,4 +1,4 @@
-require 'hw1'
+require 'hw1_part4'
 require 'test/unit'
 
 class TestBasicOOP < Test::Unit::TestCase
