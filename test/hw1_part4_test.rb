@@ -29,10 +29,10 @@ class TestBasicOOP < Test::Unit::TestCase
         assert jelly_bean.delicious?
 
         jelly_bean.flavor = 'black licorice'
-        assert !jelly_bean.delicious?
+        assert jelly_bean.delicious? == false
 
         jelly_bean.flavor = 'Black Licorice'
-        assert !jelly_bean.delicious?
+        assert jelly_bean.delicious? == false
     end
 
 end
