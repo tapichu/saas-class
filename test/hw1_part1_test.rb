@@ -9,8 +9,8 @@ class TestFunWithStrings < Test::Unit::TestCase
                    "Madam, I'm Adam!", "^Madam, I'm Adam!$", ""]
     not_palindromes = ["Abracadabra"]
 
-    palindromes.each {|pal| assert palindrome? pal }
-    not_palindromes.each {|not_pal| assert !palindrome? not_pal }
+    palindromes.each { |pal| assert palindrome?(pal) }
+    not_palindromes.each { |not_pal| assert !palindrome?(not_pal) }
   end
 
   def test_count_words
