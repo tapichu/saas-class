@@ -18,14 +18,21 @@ or:
 rake test:all
 ```
 
+### Running all tests for a specific homework
+
+``` bash
+rake test:hw1:all
+rake test:hw2:all
+```
+
 ### Testing a single part
 
 ``` bash
-rake test:1           # Test part one - fun with strings
-rake test:2           # Test part two - rock, paper, scissors
-rake test:3           # Test part three - anagrams
-rake test:4           # Test part four - basic OOP
-rake test:5           # Test part five - advanced OOP
+rake test:hw1:1           # Test part one - fun with strings
+rake test:hw1:2           # Test part two - rock, paper, scissors
+rake test:hw1:3           # Test part three - anagrams
+rake test:hw1:4           # Test part four - basic OOP
+rake test:hw1:5           # Test part five - advanced OOP
 ```
 
 ## Testing without rake
