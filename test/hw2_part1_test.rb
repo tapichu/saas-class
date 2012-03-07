@@ -23,8 +23,8 @@ class TestMetaprogramming < Test::Unit::TestCase
                    "^Madam, I'm Adam!$", ""]
     not_palindromes = ["Abracadabra"]
 
-    palindromes.each {|pal| assert pal.palindrome? }
-    not_palindromes.each {|not_pal| assert !not_pal.palindrome? }
+    palindromes.each { |pal| assert pal.palindrome? }
+    not_palindromes.each { |not_pal| assert !not_pal.palindrome? }
   end
 
   def test_enumerable_palindromes
@@ -35,13 +35,13 @@ class TestMetaprogramming < Test::Unit::TestCase
       [1,2,3,1,2], [:one, :two]
     ]
 
-    palindromes.each {|pal| assert pal.palindrome? }
-    not_palindromes.each {|not_pal| assert !not_pal.palindrome? }
+    palindromes.each { |pal| assert pal.palindrome? }
+    not_palindromes.each { |not_pal| assert !not_pal.palindrome? }
   end
 
   def test_hash_palindromes
     assert_nothing_raised do
-      { :one => 1, :two => 2, :one => 1}.palindrome?
+      { :one => 1, :two => 2, :one => 1 }.palindrome?
     end
   end
 
