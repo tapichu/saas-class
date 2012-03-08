@@ -28,12 +28,8 @@ class TestMetaprogramming < Test::Unit::TestCase
   end
 
   def test_enumerable_palindromes
-    palindromes = [
-      [1,2,3,2,1], [1,1], [:one, :two, :two, :one]
-    ]
-    not_palindromes = [
-      [1,2,3,1,2], [:one, :two]
-    ]
+    palindromes = [ [1,2,3,2,1], [1,1], [:one, :two, :two, :one] ]
+    not_palindromes = [ [1,2,3,1,2], [:one, :two] ]
 
     palindromes.each { |pal| assert pal.palindrome? }
     not_palindromes.each { |not_pal| assert !not_pal.palindrome? }
@@ -47,8 +43,7 @@ class TestMetaprogramming < Test::Unit::TestCase
 
   def test_non_array_non_hash_enumerable
     assert !(1..5).palindrome?
-    r = Range.new(1, 2, true)
-    assert r.palindrome?
+    assert (1...2).palindrome?
   end
 
 end
