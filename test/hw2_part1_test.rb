@@ -1,18 +1,6 @@
 require 'hw2_part1'
 require 'test/unit'
 
-class PermanentPalindrome
-  include Enumerable
-  @@fixed_el = [:able, :was, :i, :ere, :i, :was, :able]
-  def each ; @@fixed_el.each {|el| yield el } ; end
-end
-
-class PermanentNonpalindrome
-  include Enumerable
-  @@fixed_el = [:able, :was, :i, :ere, :i, :saw, :elba]
-  def each ; @@fixed_el.each {|el| yield el } ; end
-end
-
 class TestMetaprogramming < Test::Unit::TestCase
 
   def test_currency_conversion
@@ -57,14 +45,10 @@ class TestMetaprogramming < Test::Unit::TestCase
     end
   end
 
-  def test_custom_enumerable_class_1
-    pp = PermanentPalindrome.new
-    assert pp.palindrome?
-  end
-
-  def test_custom_enumerable_class_2
-    !pn = PermanentNonpalindrome.new
-    assert !pn.palindrome?
+  def test_non_array_non_hash_enumerable
+    assert !(1..5).palindrome?
+    r = Range.new(1, 2, true)
+    assert r.palindrome?
   end
 
 end
